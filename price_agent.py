@@ -48,9 +48,9 @@ async def start_price_node():
                         shares_to_buy = int(virtual_cash // raw_price)
                         shares_held += shares_to_buy
                         virtual_cash -= (shares_to_buy * raw_price)
-                        print(f"   🟢 ORDER EXECUTED: Bought shares successfully.")
+                        print(f"    ORDER EXECUTED: Bought shares successfully.")
                     else:
-                        print("   ❌ ORDER BLOCKED: The strategy was overridden by the Risk Officer.")
+                        print("    ORDER BLOCKED: The strategy was overridden by the Risk Officer.")
             else:
                 print("   >>> STRATEGY ARCHITECTURE: SIGNAL HOLD")
                 
