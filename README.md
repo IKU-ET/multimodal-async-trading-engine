@@ -1,16 +1,19 @@
-# Multimodal Distributed Multi-Agent Quantitative Architecture
+# Multimodal Distributed Multi-Agent Hybrid Trading Architecture
 
-An engineering-first distributed algorithmic trading framework modeled after institutional high-frequency trading (HFT) architectures. The engine separates computational mathematical processing from textual semantic analysis across completely independent microservice system nodes.
+An institutional-grade, multi-language distributed algorithmic trading framework modeled after high-frequency trading (HFT) system topologies. The architecture decouples high-speed hardware-level data packet ingestion from text-based alternative intelligence and portfolio execution matrices using separate microservice system nodes.
 
-## System Topology & Microservices
+## System Topology & Microservices Map
 
-The repository is divided into decoupled algorithmic processing components that execute concurrently:
+The repository is divided into isolated processing layers running concurrently across unique terminal nodes:
 
-*   **`core.py` (Internal Asynchronous Backbone):** A single-process prototype utilizing Python's `asyncio` event loop to coordinate parallel tasks using an in-memory "Whiteboard" state dictionary.
-*   **`new_agent.py` (Textual Intelligence Node):** A standalone microservice that simulates live alternative text ingestion feeds. It continuously extracts programmatic sentiment matrix layers (`-1.0` to `+1.0`) and broadcasts them to a shared system pipeline.
-*   **`price_agent.py` (Quantitative DSP Execution Node):** A standalone mathematical runtime service that ingests real-time price tick feeds. It maps an adjustable ECE Exponential Moving Average (EMA) smoothing equation to raw inputs to filter out market noise and dynamically intercepts data updates from the Text Node.
+*   **`market_engine.c` (Ultra-Low-Latency Hardware Muscle Node):** A native, compiled C engine designed to ingest high-frequency raw network packet arrays at the hardware layer. It bypasses slow runtime environments by updating a low-latency shared tracking memory layout (`live_price_shm.txt`) directly.
+*   **`new_agent.py` (Alternative Text Intelligence AI Node):** A standalone microservice that handles incoming unstructured textual pipelines. It simulates live financial headline scraping, extracts numeric sentiment parameters (-1.0 to +1.0), and broadcasts metrics over an independent pipeline loop.
+*   **`price_agent.py` (Quantitative Strategy Matrix Core):** A dedicated Python processing node that reads streaming market tick buffers, applies an ECE Exponential Moving Average (EMA) smoothing equation to clean out market noise, and automatically queries the Risk Node for transactional clearances.
+*   **`risk_agent.py` (Autonomous Capital Risk Guard Node):** The strict boardroom risk management officer. It intercepts execution requests, audits ledger cache positions against rigid position parameters (`MAX_POSITION_LIMIT`), and issues binding transaction verdicts to protect virtual capital.
+*   **`core.py` (Internal Asynchronous Backbone Prototype):** A single-process asynchronous framework model utilizing Python's `asyncio` event loop to simulate parallel task management using an in-memory shared whiteboard.
 
-## Core System Dials
-The mathematical engine variables can be optimized at the top initialization layer of the nodes:
-*   `ALPHA_FILTER`: Dictates the digital signal processing noise filtering weight (0.01 to 1.0).
-*   `STARTING_CAPITAL`: Sets the initial asset resource liquidity boundary.
+## Low-Latency Strategy Optimization Dials
+*   `ALPHA_FILTER`: Adjusts the digital signal processing noise filtering weight threshold (0.01 to 1.0).
+*   `STARTING_CAPITAL`: Dictates the localized financial resource allocation boundary.
+*   `MAX_CAPITAL_PER_TRADE_PERCENT`: Enforces strict maximum spending limits per transaction loop.
+
