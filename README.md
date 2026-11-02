@@ -1,18 +1,16 @@
-# Multimodal Asynchronous Quantitative Trading Architecture
+# Multimodal Distributed Multi-Agent Quantitative Architecture
 
-An engineering-first algorithmic trading backtesting engine built to simulate concurrent multi-agent decision matrices. The framework separates high-speed mathematical digital signal processing from slow textual sentiment logic using non-blocking asynchronous event loops.
+An engineering-first distributed algorithmic trading framework modeled after institutional high-frequency trading (HFT) architectures. The engine separates computational mathematical processing from textual semantic analysis across completely independent microservice system nodes.
 
-## Core Engineering Features
+## System Topology & Microservices
 
-* **Asynchronous Non-Blocking Core:** Utilizing Python's `asyncio` event loop to ensure a high-frequency trading simulation engine (Cheetah) executes on market ticks concurrently without suffering data lag or blocking from slow text analysis pipelines (Turtle).
-* **Decoupled Shared Cache:** Implements a unified in-memory "Whiteboard" state dictionary acting as a zero-latency database lookup layout for real-time asset alignment.
-* **ECE Digital Signal Processing Filter:** Implements an adjustable Exponential Moving Average (EMA) signal smoothing algorithm to clear erratic market noise and locate true price trend breakouts.
-* **Real-World Cloud Data Stream:** Integrates the `yfinance` architecture to pipe structured 3-month daily time-series financial datasets straight to your local system paths.
-* **Automated Resource Allocation Ledger:** Features a self-calculating accounting matrix that computes capital constraints, handles multi-asset inventory sizing, executes automated entry/liquidation triggers, and logs dynamic performance dashboards.
+The repository is divided into decoupled algorithmic processing components that execute concurrently:
 
-## System Parameters & Strategy Dials
+*   **`core.py` (Internal Asynchronous Backbone):** A single-process prototype utilizing Python's `asyncio` event loop to coordinate parallel tasks using an in-memory "Whiteboard" state dictionary.
+*   **`new_agent.py` (Textual Intelligence Node):** A standalone microservice that simulates live alternative text ingestion feeds. It continuously extracts programmatic sentiment matrix layers (`-1.0` to `+1.0`) and broadcasts them to a shared system pipeline.
+*   **`price_agent.py` (Quantitative DSP Execution Node):** A standalone mathematical runtime service that ingests real-time price tick feeds. It maps an adjustable ECE Exponential Moving Average (EMA) smoothing equation to raw inputs to filter out market noise and dynamically intercepts data updates from the Text Node.
 
-The architecture features a localized configuration tier at the core initialization line to enable immediate strategic optimization tests:
-* `TARGET_TICKER`: The asset baseline target data pipeline (e.g., AAPL).
-* `ALPHA_FILTER`: The mathematical tuning knob dictating ECE smoothing noise limits.
-* `STARTING_CAPITAL`: The virtual asset liquidity constraint.
+## Core System Dials
+The mathematical engine variables can be optimized at the top initialization layer of the nodes:
+*   `ALPHA_FILTER`: Dictates the digital signal processing noise filtering weight (0.01 to 1.0).
+*   `STARTING_CAPITAL`: Sets the initial asset resource liquidity boundary.
